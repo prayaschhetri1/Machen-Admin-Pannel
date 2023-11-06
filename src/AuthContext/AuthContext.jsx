@@ -18,7 +18,8 @@ export const AuthContextProvider = ({children}) => {
 
 
  
-    let data = JSON.parse(localStorage.getItem("name"))
+    let data = JSON.parse(localStorage.getItem("name"));
+    
 const [signUpdata,setSignupData] = useState({})
     const handleFormSubmit = (e) => {
        e.preventDefault()
@@ -37,7 +38,7 @@ const [signUpdata,setSignupData] = useState({})
 
    
 
-    const [isAuth,setIsAuth] = useState(true)
+    const [isAuth,setIsAuth] = useState(false)
     return (
         <AuthContext.Provider value={{isAuth,handleFormSubmit,handleChange,signUp,setSignUp,data,setIsAuth}}>{children}</AuthContext.Provider>
     )

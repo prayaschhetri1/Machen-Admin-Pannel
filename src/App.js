@@ -5,17 +5,23 @@ import SideNav from "./components/SideNav";
 import Signup from "./components/registration/Signup";
 import { Route, Routes } from "react-router-dom";
 import Profile from "./components/registration/Profile";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "./AuthContext/AuthContext";
+import { useState } from "react";
 
+let authChecker = JSON.parse(localStorage.getItem("checkAuth"));
 function App() {
-  const { isAuth } = useContext(AuthContext);
-  // console.log(isAuth)
+  const [authCheck,setAuthCheck] = useState(authChecker || false)
+
+
+  useEffect(() =>{
+    setAuthCheck(authChecker)
+  },[])
   return (
     <>
       {/* <SideNav/> */}
       {/* <SignIn/> */}
-      {isAuth ? (
+      {authCheck  ? (
         <>
           <Routes>
             <Route path="/" element={<SideNav />} />

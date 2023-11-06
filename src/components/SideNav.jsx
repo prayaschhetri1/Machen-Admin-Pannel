@@ -116,7 +116,7 @@ export default function SideNav() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Admin Pannel
+            Admin Panel
           </Typography>
         </Toolbar>
       </AppBar>
