@@ -12,11 +12,6 @@ import { useState } from "react";
 let authChecker = JSON.parse(localStorage.getItem("checkAuth"));
 function App() {
   const [authCheck,setAuthCheck] = useState(authChecker || false)
-
-
-  useEffect(() =>{
-    setAuthCheck(authChecker)
-  },[])
   return (
     <>
       {/* <SideNav/> */}
