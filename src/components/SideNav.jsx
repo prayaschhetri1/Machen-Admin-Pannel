@@ -18,6 +18,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import img from './user.png'
 import { useState } from "react";
 import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
 
@@ -191,9 +192,10 @@ export default function SideNav() {
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
-              image="./user.png"
-              alt="green iguana"
+              height="330"
+              width="100%"
+              image={img}
+              alt="user"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
